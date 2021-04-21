@@ -31,7 +31,6 @@ export const processData = (data) => {
         if (str.indexOf("DNSSEC") > -1) break
         if (str.indexOf("% This is the RIPE Database query service.") > -1) {
             // an invalid address prints out a bunch of stuff related to the whois service, we don't need to see it, return an error
-            // Lambda always returns status code 200 if the function is successfully reached,
             // so I can't seem to return a useful error code. A string body has to suffice
             return "ERROR_BAD_ADDRESS"
         }
