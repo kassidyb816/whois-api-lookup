@@ -17,3 +17,37 @@ export default class Input extends Component {
         this.props.submit(this.state.value)
         this.setState({ value: "" })
     }
+
+
+    onSubmit(ev) {
+        if (ev.key === "Enter") {
+            this.passValue()
+            ev.target.value = ""
+        }
+    }
+
+
+    handleChange(ev) {
+        this.setState({ value: ev.target.value })
+        ev.preventDefault()
+    }
+
+
+    render() {
+        return (
+            <div className="FormContainer">
+                <input type="text"
+                       className="form-control InputField"
+                       placeholder="IP or Domain"
+                       aria-label="ip"
+                       onKeyDown={ this.onSubmit }
+                       onChange={ this.handleChange }
+                       value={ this.state.value }>
+                </input>
+                <button className="btn btn-outline-light FormButton"
+                        onClick={ this.passValue }>Submit
+                </button>
+            </div>
+        )
+    }
+}
