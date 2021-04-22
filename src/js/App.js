@@ -28,7 +28,7 @@ export default class App extends Component {
             <div className="App">
 
                 <header className="App-header">
-                    <p>Input something to find out things about it!</p>
+                    <p>Input a URL or IP Address to see the data! it!</p>
                 </header>
 
                 <Input submit={ this.submitAddress }/>

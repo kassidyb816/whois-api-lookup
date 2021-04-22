@@ -29,7 +29,7 @@ Bonus Points:
 
 When Finished: Submit links to the repositories and the URL for the web application.
 
-Whois-api lookup is created with REACT, Node.js, and JavaScript. It is deployed and hosted with GitHub pages, and tested with jest.
+Whois-api lookup is created with REACT, Node.js, and JavaScript. It is deployed and hosted with heroku.
 
 Clone the repo. Either through your terminal:
 
